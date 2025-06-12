@@ -1,3 +1,10 @@
+:root {
+    --gold-color: rgb(214, 182, 0);
+    --move-color: url(https://www.antheor-paris.fr/assets/img/L00011.jpg);
+    --play-Font: "Playfair Display";
+    --box-shadow: 0 0 10px rgba(0,0,0,.5);
+  }
+
 *{
     padding: 0;
     margin: 0;
@@ -6,81 +13,68 @@
 
 /* header <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-/* nav1 <<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-#div_myNav1{
-    position: sticky;
-    top: 0;
-}
-/* logos <<<<<<<<<<<<<<<<<<<<<<<<< */
+/* div_myNav1 <<<<<<<<<<<<<<<<<<<< */
 
-.ri-phone-fill{
-    color: gold;
-    /* justify-content: right; */
-}
-.ri-calendar-check-fill{
-    color: gold;
-    /* justify-content: right; */
-}
-.ri-send-plane-fill{
-    color: gold;
-    /* justify-content: left; */
-}
-.ri-chat-3-fill{
-    color: gold;
-    /* justify-content: left; */
-}
-
-
-/* logos >>>>>>>>>>>>>>>>>>>>>>>>> */
-
-
-#myNav1{
+.div_myNav1{
     background-color: #24111e;
-    color: white;
-    padding: 0px 15em;
-    display: block;
-    position: sticky; /* Rend la navbar sticky */
-    top: 0;          /* S'accroche en haut de la fenêtre */
-    z-index: 1000; 
-}
-
-#myNav1 ul li{
-    display: inline-block;
-    padding: 0px 20px;
-    border-left: 1px gray solid;
-    height: 50px;
+    position: sticky;
+    height: 38px;
+    top: 0;
+    padding: 0px;
+    display: flex;
     justify-content: center;
-    display: inline-flex;
-    flex-direction: column;
 }
 
-.right_border_i{
-    border-right: 1px gray solid;
+
+
+.div_myNav1 ul{
+    display: flex;
 }
 
-#myNav1 ul li a{
-    color: #fff;
+.div_myNav1 ul li{
+    margin: 0px 15px;
     text-decoration: none;
+    list-style: none;
 }
 
-#myNav1 ul li a i{
-    position: relative;
-    padding-left: 2px;
-    padding-right: 5px;
-    z-index: -1;
+.div_myNav1 li a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
 }
 
+.div_myNav1 li i{
+    color: rgb(214, 182, 0);
+}
 
-#leftNavs{
+.myLeft{
     position: absolute;
-    left: 70%;
-    /* transform: translateX(-50); */
+    left: 25%;
+    transform: translateX(-50%);
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
 }
-/* nav1 >>>>>>>>>>>>>>>>>>>>>>>>>> */
 
+.myRight{
+    position: absolute;
+    right: 25%;
+    transform: translateX(50%);
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
 
+.rightBar{
+    border-right: 1px solid gray;
+    padding: 10px;
+}
 
+.leftBar{
+    padding: 10px 0;
+    padding-left: -10px;
+
+}
+/* div_myNav1 >>>>>>>>>>>>>>>>>>>> */
 
 
 /* div_imageHead <<<<<<<<<<<<<<<<< */
@@ -139,6 +133,7 @@
 
 #imageHead3{
     margin-right: 10px;
+    width: 40px;
 }
 
 #data_position p {
@@ -175,10 +170,9 @@
 }
 
 #myNav2{
-    margin: 0 auto;
-    position: sticky;
+    /* margin: 0 auto;
     top: 0;
-    z-index: 1002;
+    z-index: 1002; */
 }
 
 #myNav2 ul li{
@@ -192,6 +186,43 @@
     color: black;
     text-decoration: none;
 }
+
+
+.dropLi{
+    position: relative;
+}
+
+.dropdown{
+    position: absolute;
+    display: none;
+    bottom: 0;
+    transform: translateY(100%);
+    left: 0;
+    background-color: rgba(255,255,255,.7);
+    z-index: 2000;
+    padding: 5px 10px;
+    min-width: 150%;
+}
+
+.dropdown a{
+    padding: 7px 10px;
+}
+
+.dropdown a:hover{
+    background-color: #fff;
+    padding: 7px 10px;
+}
+
+.dropdown a{
+    display: block;
+    text-align: left;
+}
+
+.dropLi:hover .dropdown{
+    display: block;
+}
+
+
 /* myNav2 >>>>>>>>>>>>>>>>>>>>>>>> */
 
 
@@ -274,7 +305,7 @@
 
 #leftBtn:hover,#rightBtn:hover{
     border: none;
-    color: rgb(214, 182, 0);;
+    color: rgb(214, 182, 0);
 }
 
 #leftBtn:visited,#rightBtn:visited{
@@ -574,6 +605,1025 @@ h4{
     color: white;
 }
 /* myGrid4 >>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+/* div_myGrid5 <<<<<<<<<<<<<<<<<<< */
+
+#div_myGrid5{
+    height: 120vh;
+    padding-bottom: -10px;
+    width: 100%;
+}
+
+.myGrid5{    
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-template-rows: repeat(3,auto);
+    /* grid-template-areas: "topleft topright"
+                          "middleleft middleright"
+                          "bottomleft bottommiddle bottomright"
+    ; */
+    justify-content: space-between;
+    
+}
+
+.myDivs500{
+    margin: 30px 50px;
+    position: relative;
+    height: 300px;
+}
+
+.myDivs500 img{
+    position: absolute;
+    object-fit: cover;
+    display: flex;
+}
+
+#myDiv501{
+    grid-area: topleft;
+    display: flex;
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+#myDiv502{
+    grid-area: topright;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    display: flex;
+    grid-row: 1;
+}
+
+#myDiv503{
+    grid-area: middleleft;
+    grid-column: 1/4;
+    grid-row: 2;
+    display: flex;
+}
+
+#myDiv504{
+    grid-area: middleright;
+    grid-column: 4/8;
+    grid-row: 2;
+    display: flex;
+}
+
+#myDiv505{
+    grid-area: bottomleft;
+    grid-column: 1/3;
+    grid-row: 3;
+    display: flex;
+    width: 400px;
+    height: 200px;
+}
+
+#myDiv506{
+    grid-area: bottommiddle;
+    grid-column: 3/5;
+    grid-row: 3;
+    display: flex;
+    width: 400px;
+    height: 100px;
+}
+
+#myDiv507{
+    grid-area: bottomright;
+    grid-column: 5/7;
+    display: flex;
+    grid-row: 3;
+    width: 400px;
+    height: 100px;
+}
+
+/* div_myGrid5 <<<<<<<<<<<<<<<<<<< */
+
+
+
+
+
+/* div_myGrid6 <<<<<<<<<<<<<<<<<<< */
+
+#div_myGrid6{
+    height: 10vh;
+}
+
+.myGrid6{
+    display: grid;
+    grid-template-columns: repeat(2,620px);
+    grid-template-rows: repeat(1,620px);
+    grid-template-areas: "box2 box1";
+    font-size: 1.2em;
+
+}
+
+.myDivs600{
+    margin: 20px;
+}
+
+#myDiv601{
+    background: url(https://www.antheor-paris.fr/assets/img/L00011.jpg);
+    padding: 20px 30px;
+    font-size: 1em;
+    color: white;
+    padding: 70px 20px;
+}
+
+#span6001{
+    font-size: 1.8em;
+    grid-area: box2;
+}
+
+#myDiv601 p{
+    margin-bottom: 20px;
+}
+
+#myDiv601 p i{
+    color: var(--gold-color);
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+#myDiv601 ul{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#myDiv601 ul li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#myDiv601 ul li i{
+    color: var(--gold-color);
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+#p601{
+    color: var(--gold-color);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+#myListe600{
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+
+
+#myDiv602{
+    width: 150px;
+    grid-area: box1;
+    
+}
+
+/* div_myGrid6 >>>>>>>>>>>>>>>>>>> */
+
+
+.mytitle{
+    font-size: 4em;
+}
+
+
+
+
+
+
+
+/* div_myGrid7 <<<<<<<<<<<<<<<<<<< */
+
+.centerMyDiv7{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.myGrid7{
+    display: grid;
+    grid-template-columns: repeat(2,500px);
+    grid-template-rows: repeat(3,auto);
+    min-width: 900px;
+    margin: 0px auto 10px auto;
+    
+}
+
+.div700{
+    background:var(--move-color);;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    
+}
+
+.divs7{
+    position: relative;
+    font-family:  sans-serifArial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: right;
+    padding: 20px 60px 20px 20px;
+    border-radius: 10px;
+}
+
+
+
+#btn701{
+    border: none;
+    background: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    cursor: pointer;
+}
+
+.div_logo{
+    background-color: var(--gold-color);
+    height: 102%;
+    width: 25%;
+    top: -1px;
+    left: -1px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 11px 0 0 11px;
+    border: none;
+}
+
+#div701{
+    grid-area: 1/1/4/2;
+    font-family: 'Playfair Display';
+    font-size: 2em;
+}
+
+#div702,#div703,#div704{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+
+#div702{
+    grid-area: 1/2/2/3;
+}
+
+#div703{
+    grid-area: 2/2/3/3;
+}
+
+#div704{
+    grid-area: 3/2/4/3;
+}
+
+
+
+/* div_myGrid7 >>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* myGrid8 <<<<<<<<<<<<<<<<<<<<<<< */
+.centerMyDiv8{
+    padding: 1px;
+    margin: 0;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--move-color);
+    color: white;
+}
+
+.myGrid8{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(8,180px);
+    grid-template-rows: repeat(3,120px);
+    /* width: 1100px; */
+    margin: 0px auto 10px auto;
+}
+
+.div800{
+    margin: 10px;
+    text-align: center;   
+}
+
+
+.div800 input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    width: 80%;
+    height: 50%;
+    color: white;
+    padding: 10px 20px;
+}
+
+.div800 textarea{
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    width: 91%;
+    height: 60%;
+    color: #fff;
+    padding: 10px 10px 5px 0;
+}
+
+#div801{
+    grid-area: 1/1/4/5;
+    text-align: left;
+    padding: 40px 30px;
+    
+
+}
+
+#spn1{
+    color: var(--gold-color);
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+#spn2{
+    text-transform: uppercase;
+}
+
+#spn3{
+    font-weight: bold;
+}
+
+#p801{
+    font-size: 2em;
+}
+
+#p802{
+    color: var(--gold-color);
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#p803{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+#div802{
+    grid-area: 1/5/2/7;
+}
+
+
+
+
+#div803{
+    grid-area: 1/7/2/9;
+}
+
+#div804{
+    grid-area: 2/5/3/7;
+}
+
+#div805{
+    grid-area: 2/7/3/9;
+}
+
+#div806{
+    grid-area: 3/5/4/9;
+    position: relative;
+}
+
+#div806 button{
+    padding: 10px 40px;
+    position: absolute;
+    bottom: -40px;
+    right: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(255,255,255,.7);
+    transform: translateX(50%);
+}
+
+#div806 button:hover{
+    box-shadow: 0 0 20px rgba(214, 182, 0,.8);
+}
+/* myGrid8 >>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* myGrid9 <<<<<<<<<<<<<<<<<<<<<<< */
+.centerMyDiv9{
+    padding: 1px;
+    margin: 0;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: white;
+}
+
+.myGrid9{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(2,720px);
+    grid-template-rows: repeat(8,auto);
+    /* width: 1100px; */
+    margin: 0px auto 10px auto;
+}
+
+.div900{
+    background:var(--gold-color);;
+    margin: 20px;
+    text-align: center;   
+}
+
+
+#div901{
+    padding: 50px 30px;
+    text-align: left;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+
+}
+
+#div902{
+    background-image: url("img/drive-download_11-fichiers/img.jpg");
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+#div901,#div902{
+    margin-top: 100px;
+}
+
+#div901{
+    grid-area: 1/1/3/2;
+}
+
+#div902{
+    grid-area: 1/2/3/3;
+}
+
+#div903{
+    grid-area: 3/1/4/3;
+    padding: 50px 30px;
+    text-align: left;
+    box-shadow: var(--box-shadow);
+}
+
+#div904{
+    grid-area: 4/1/6/2;
+    padding: 50px 30px;
+    text-align: left;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+#div905{
+    grid-area: 4/2/6/3;
+    padding: 50px 30px;
+    text-align: left;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+#div906{
+    grid-area: 6/1/7/3;
+}
+
+#div907{
+    grid-area: 7/1/9/2;
+}
+
+#div908{
+    grid-area: 7/2/9/3;
+}
+
+#div907,#div908{
+    margin-bottom: 80px;
+}
+
+/* myGrid8 >>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* myGridX <<<<<<<<<<<<<<<<<<<<<<<*/
+.centerMyDivX{
+    padding: 1px;
+    margin: 0;
+    display: flex;
+    height: 25vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--move-color);
+    color: white;
+}
+
+.myGridX{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,440px);
+    grid-template-rows: repeat(1,180px);
+    /* width: 1100px; */
+    margin: 0px auto 10px auto;
+}
+
+.myGridX i{
+    font-size: 2.5em;
+    color: var(--gold-color);
+    
+}
+
+.divX00{
+    margin: 20px;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.desc{
+    margin: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.4;
+}
+
+#divX01{
+    grid-column: 1/2;
+    
+}
+
+#divX02{
+    grid-column: 2/3;
+}
+
+#divX03{
+    grid-column: 3/4;
+}
+
+/* myGridX >>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* centerMyDivX1 <<<<<<<<<<<<<<<<< */
+.centerMyDivX1{
+    padding: 1px;
+    margin: 0;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    /* background: var(--move-color); */
+    color: white;
+}
+
+.myGridX1{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(2,720px);
+    grid-template-rows: repeat(3,auto);
+    /* width: 1100px; */
+    margin: 0px auto 10px auto;
+}
+
+.divX100{
+    padding: 60px 30px;
+    margin: 10px;
+    text-align: center;   
+}
+
+
+#divX101{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color: rgb(252, 252, 252) ;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    color: black;
+    padding: 50px 30px;
+    font-size: 1em;
+    text-align: left;
+}
+
+#divX102{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background: var(--move-color);
+    color: white;
+    text-align: center;
+}
+#divX102{
+    font-family: var(--play-Font);
+    padding: 20px;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    font-size: 1.5em;
+}
+
+
+#divX103{
+    grid-column: 2/3;
+    grid-row: 1/4;
+    background-image: url("img/drive-download_11-fichiers/img.jpg");
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-size: auto;
+    /* width: 50%; */
+}
+
+/* #divX103 img{
+    object-fit: cover;
+    overflow: hidden;
+} */
+
+/* centerMyDivX1 >>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* centerMyDivX2 <<<<<<<<<<<<<<<<< */
+.centerMyDivX2{
+    position: relative;
+    padding: 1px;
+    margin: 0;
+    display: flex;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    /* background: var(--move-color); */
+    /* color: white; */
+}
+
+.myGridX2{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(6,230px);
+    grid-template-rows: repeat(1,200px);
+    /* width: 1100px; */
+    margin: 0px auto 10px auto;
+    position: relative;
+}
+
+.divX200{
+    background-color: white;
+    margin: 10px;
+    text-align: center;   
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-radius: 10px;
+}
+
+
+#divX201{
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+#divX202{
+    grid-column: 4/7;
+    grid-row: 1/2;
+}
+
+#toGoogle{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(150%);
+    right: 0;
+    padding: 5px 15px;
+}
+
+
+
+#navCommentBtn{
+    position: absolute;
+    right: 12%;
+    top: 7%;
+}
+
+#navCommentBtn button{
+    padding: 5px 10px;
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    margin: 5px;
+    color: black;
+    cursor: pointer;
+    background-color: rgb(218, 218, 218);
+}
+
+#navCommentBtn button:hover{
+    color: rgb(218, 218, 218);
+    background-color: black;
+}
+
+
+
+
+#divLastBtn{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+.centerMyDivX2 button{
+    padding: 25px 40px;
+    margin: auto 40px;
+    text-transform: uppercase;
+    font-family: var(--play-Font);
+    font-weight: bold;
+    font-size: 2em;
+    background-color: var(--gold-color);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    color: white;
+    cursor: pointer;
+    border: 0.01px black;
+}
+
+.centerMyDivX2 button:hover{
+    background-color: rgb(228, 194, 0);
+}
+
+.user{
+    color: gray;
+    font-size: 3em;
+    position: absolute;
+    left: 40px;
+    top: 25px;
+}
+
+.comment{
+    position: absolute;
+    top: 3.5em;
+    left: 6em;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.userNmae{
+    color: var(--gold-color);
+}
+
+.starList{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 75%;
+    left: 5.5em;
+    color: var(--gold-color);
+}
+
+.starList li{
+    margin: 0 5px;
+}
+
+.star{
+    font-size: 1.5em;
+}
+
+
+/* centerMyDivX2 >>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* myGridX3 <<<<<<<<<<<<<<<<<<<<<<<*/
+.centerMyDivX3{
+    padding: 1px;
+    margin: 0;
+    display: flex;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--move-color);
+    color: white;
+}
+
+.myGridX3{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 490px 340px 340px;
+    grid-template-rows: repeat(1,180px);
+    /* width: 1100px; */
+    margin: 0px auto 10px auto;
+}
+
+.divX300{
+    margin: 10px 0px;
+    /* text-align: center; */
+}
+
+
+#divX301{
+    grid-column: 1/2;
+    margin-right: 50px;
+}
+
+#divX301 img {
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#divX302{
+    grid-column: 2/3;
+    /* background:var(--gold-color); */
+}
+
+#divX303{
+    grid-column: 3/4;
+    /* background:var(--gRachatold-color); */
+}
+
+
+.subtitles{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+.barr{
+    color: var(--gold-color);
+    font-weight: bold;
+    text-align: left;
+    font-size: 2em;
+    margin-top: -10px;
+}
+
+.divX300 ul{
+    list-style: none;
+}
+
+.liX300 {
+    color: gainsboro;
+    margin: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* myGridX3 >>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+/* centerMyDivX4 <<<<<<<<<<<<<<<<< */
+.centerMyDivX4{
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.myGridX4{
+    /* margin: 40px; */
+    display: grid;
+    grid-template-columns: repeat(2,740px);
+    grid-template-rows: repeat(1,30px);
+    /* width: 1100px; */
+    margin: 0px auto 10px auto;
+}
+
+.divX400{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background:var(--gold-color);; */
+    margin: 0px 100px;
+    text-align: center;   
+}
+
+
+#divX401{
+    grid-column: 1/2;
+}
+
+#divX402{
+    grid-column: 2/3;
+}
+
+
+
+/* centerMyDivX4 >>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
 
 
 /* container >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
